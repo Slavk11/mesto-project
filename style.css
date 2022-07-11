@@ -38,22 +38,18 @@
 
 .profile {
   
-  margin: 0px 200px 50px 200px;
+  margin: 0 200px 50px 200px;
   display: flex;
   justify-content: space-between;
 }
 
 @media (max-width: 1065px) {
   .profile {
-  flex-wrap: wrap;
+  flex-direction: column;
   }
 }
 
-@media (max-width: 1065px) {
-  .profile {
-  flex-wrap: wrap;
-  }
-}
+
 
 @media (max-width: 490px) {
   .profile {
@@ -81,12 +77,22 @@
   display: flex;
 }
 
-@media (max-width: 893px) {
+@media (max-width: 1064px) {
   .profile__info {
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
   }
 }
+
+@media (max-width: 372px) {
+  .profile__info {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+  }
+}
+
 
 .profile__content {
   margin-left: 30px;
@@ -107,6 +113,13 @@
   text-align: center;
   align-items: baseline;
   
+}
+
+@media (max-width: 669px) {
+  .profile__info-title {
+  font-size: 36px;
+  
+  }
 }
 
 @media (max-width: 372px) {
@@ -150,10 +163,24 @@
   background-position: center;
 }
 
-@media (max-width: 372px) {
+@media (max-width: 1064px) {
   .profile__add_button{
   width: 282px;
   height: 50px;
+  
+  }
+}
+
+@media (max-width: 490px) {
+  .profile__add_button{
+    margin: 0 auto 36px;
+    
+  
+  }
+}
+
+@media (max-width: 372px) {
+  .profile__add_button{
   margin: 0 19px 36px 19px;
   }
 }
@@ -197,9 +224,16 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 372px) {
+@media (max-width: 819px) {
   .gallery {
-    margin: 0 19px 0 19px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 331px) {
+  .gallery {
+    margin-left: 19px;
   }
 }
 
