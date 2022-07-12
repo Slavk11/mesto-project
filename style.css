@@ -274,6 +274,12 @@
   margin-left: 200px;
 }
 
+@media (max-width: 819px) {
+  .footer {
+    margin-left: 100px;
+  }
+}
+
 @media (max-width: 372px) {
   .footer {
     margin: 0 19px 0 19px;
