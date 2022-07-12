@@ -49,6 +49,11 @@
   }
 }
 
+@media (max-width: 891px) {
+  .profile {
+  margin: 0 auto 50px;
+  }
+}
 
 
 @media (max-width: 490px) {
@@ -63,7 +68,7 @@
   border-radius: 169px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 453px) {
   .profile__photo {
   margin-bottom: 22px;
   }
@@ -139,6 +144,7 @@
   color: #FFFFFF;
   margin: 0;
 }
+
 
 @media (max-width: 372px) {
   .profile__info__subtitle{
