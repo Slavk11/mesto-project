@@ -237,11 +237,6 @@
   }
 }
 
-@media (max-width: 331px) {
-  .gallery {
-    margin-left: 19px;
-  }
-}
 
 .gallery__elements {
   margin: 0 17px 20px 0;
@@ -259,6 +254,19 @@
     margin: 0 17px 20px 0;
   }
 }
+
+@media (max-width: 578px) {
+  .gallery__elements {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 578px) {
+  .gallery__elements:nth-child(3n) {
+    margin: 0 0 20px 0;
+  }
+}
+
 .gallery__photo {
   width: 282px;
   height: 282px;
@@ -275,7 +283,6 @@
 }
 
 
-
 .gallery__text {
   font-style: normal;
   font-weight: 900;
@@ -289,6 +296,8 @@
   margin: 0;
   
 }
+
+
 
 .footer{
   
