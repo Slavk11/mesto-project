@@ -5,6 +5,11 @@
   margin: 0 auto;
 }
 
+@media (max-width: 879px) {
+  .page {
+    max-width: 600px;
+  }
+}
 
 .header {
   max-width: 880px;
@@ -25,6 +30,14 @@
   width: 142px;
   height: 33px;
   margin-bottom: 41px;
+}
+
+@media (max-width: 949px) {
+  .header__logo {
+    margin-bottom: 32px;
+    margin-left: 27px;
+
+  }
 }
 
 @media (max-width: 425px) {
@@ -300,14 +313,15 @@
 
 
 .footer{
-  
+  margin: 0 auto;
 }
 
-@media (max-width: 819px) {
+@media (max-width: 596px) {
   .footer {
-    margin-left: 100px;
+    max-width: 320px;
   }
 }
+
 
 @media (max-width: 372px) {
   .footer {
@@ -321,4 +335,11 @@
   font-size: 18px;
   line-height: 22px;
   color: #545454;
+}
+
+@media (max-width: 597px) {
+  .footer__logo {
+  font-size: 14px;
+  line-height: 17px;
+  }
 }
