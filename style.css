@@ -5,12 +5,6 @@
   margin: 0 auto;
 }
 
-@media (max-width: 879px) {
-  .page {
-    max-width: 600px;
-  }
-}
-
 .header {
   max-width: 880px;
   max-height: 74px;
@@ -182,6 +176,12 @@
   background-position: center;
 }
 
+.profile__add_button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all .3s linear;
+}
+
 @media (max-width: 1064px) {
   .profile__add_button{
   width: 282px;
@@ -231,6 +231,12 @@
     height: 18px;
     margin: 10px 0 0 10px;
   }
+}
+
+.profile__edit-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all .3s linear;
 }
 
 .profile__info-content-title {
@@ -310,10 +316,14 @@
   
 }
 
-
-
 .footer{
   margin: 0 auto;
+}
+
+@media (max-width: 879px) {
+  .footer {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 596px) {
@@ -342,4 +352,98 @@
   font-size: 14px;
   line-height: 17px;
   }
+}
+
+
+.popup {
+  width: 880px;
+  min-height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 879px) {
+  .popup {
+  width: 100%;
+  }
+}
+
+.popup .b-popup-content{
+  width:430px;
+  height: 330px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.popup__title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+
+.popup__subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  align-self: flex-start;
+  margin: 30px 0 13px 36px;
+}
+
+
+.popup__line {
+  background-image: url(./img/Line\ 2.png);
+  width: 358px;
+  height: 1px;
+}
+
+.popup__button {
+  width: 358px;
+  height: 50px;
+  margin-top: 48px;
+  background-color: #000;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.popup__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all .3s linear;
+}
+
+.popup__close-button {
+  background-image: url(./img/Close\ Icon.png);
+  background-color:transparent;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  left: 465px;
+  bottom: 190px;
+  outline:none; 
+  border:none;
+}
+
+.popup__close-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all .3s linear;
 }
