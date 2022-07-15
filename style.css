@@ -364,7 +364,7 @@
   top: 0px;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
 }
 
 @media (max-width: 879px) {
@@ -373,7 +373,7 @@
   }
 }
 
-.popup .b-popup-content{
+.popup__container{
   width:430px;
   height: 330px;
   background-color: #fff;
@@ -446,4 +446,8 @@
   cursor: pointer;
   opacity: 0.6;
   transition: all .3s linear;
+}
+
+.popup_opened {
+  display: flex;
 }
