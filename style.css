@@ -292,6 +292,10 @@
   transition: all .3s linear;
 }
 
+.gallery__like_active {
+  background-image: url(./img/press-like.png);
+}
+
 .gallery__photo {
   width: 282px;
   height: 282px;
@@ -357,7 +361,7 @@
   }
 }
 
-.popup {
+.popup-eidt {
   width: 880px;
   min-height: 100%;
   background-color: rgba(0,0,0,0.5);
@@ -370,12 +374,12 @@
 }
 
 @media (max-width: 879px) {
-  .popup {
+  .popup-eidt {
   width: 100%;
   }
 }
 
-.popup__container {
+.popup-eidt__container {
   width: 430px;
   height: 330px;
   background-color: #fff;
@@ -388,13 +392,13 @@
 }
 
 @media (max-width: 590px) {
-  .popup__container {
+  .popup-eidt__container {
     width: 282px;
     height: 322px;
   }
 }
 
-.popup__title {
+.popup-eidt__title {
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -405,7 +409,7 @@
 }
 
 @media (max-width: 590px) {
-  .popup__title {
+  .popup-eidt__title {
     font-size: 18px;
     line-height: 22px;
     margin-top: 25px;
@@ -413,7 +417,7 @@
   }
 }
 
-.popup__subtitle {
+.popup-eidt__subtitle {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -424,24 +428,24 @@
 }
 
 @media (max-width: 320px) {
-  .popup__subtitle {
+  .popup-eidt__subtitle {
   margin-left: 22px;
   }
 }
 
-.popup__line {
+.popup-eidt__line {
   background-image: url(./img/Line\ 2.png);
   width: 358px;
   height: 1px;
 }
 
 @media (max-width: 590px) {
-  .popup__line {
+  .popup-eidt__line {
   width: 238px;
   }
 }
 
-.popup__button {
+.popup-eidt__button {
   width: 358px;
   height: 50px;
   margin-top: 48px;
@@ -453,14 +457,14 @@
   line-height: 22px;
 }
 
-.popup__button:hover {
+.popup-eidt__button:hover {
   cursor: pointer;
   opacity: 0.8;
   transition: all .3s linear;
 }
 
 @media (max-width: 590px) {
-  .popup__button {
+  .popup-eidt__button {
   width: 232px;
   height: 46px;
   font-size: 14px;
@@ -469,7 +473,7 @@
   }
 }
 
-.popup__close-button {
+.popup-eidt__close-button {
   background-image: url(./img/Close\ Icon.png);
   background-color: transparent;
   width: 32px;
@@ -481,20 +485,20 @@
   border:none;
 }
 
-.popup__close-button:hover {
+.popup-eidt__close-button:hover {
   cursor: pointer;
   opacity: 0.6;
   transition: all .3s linear;
 }
 
 @media (max-width: 868px) {
-  .popup__close-button {
+  .popup-eidt__close-button {
   right: 15%;
   }
 }
 
 @media (max-width: 590px) {
-  .popup__close-button {
+  .popup-eidt__close-button {
   background-image: url(./img/Close\ Icon\ s.png);
   width: 20px;
   height: 20px;
@@ -503,12 +507,12 @@
 }
 
 @media (max-width: 320px) {
-  .popup__close-button {
+  .popup-eidt__close-button {
   right: 5%;
   
   }
 }
 
-.popup_opened {
+.popup-eidt_opened {
   display: flex;
 }
