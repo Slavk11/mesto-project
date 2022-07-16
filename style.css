@@ -1,5 +1,23 @@
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2?v=3.19") format("woff2"),
+  url("./vendor/fonts/Inter-Regular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/Inter-Black.woff2?v=3.19") format("woff2"),
+  url("./fonts/Inter-Black.woff?v=3.19") format("woff");
+}
 .page {
-  font-family: Arial,sans-serif;
+  font-family: 'Inter', Arial,sans-serif;
   background-color: #000;
   max-width: 880px;
   margin: 0 auto;
@@ -12,6 +30,7 @@
   justify-content: flex-start;
   margin: 45px 0 40px 0;
   border-bottom: 1px solid #545454;
+  cursor: pointer;
 }
 
 @media (max-width: 425px) {
@@ -24,6 +43,13 @@
   width: 142px;
   height: 33px;
   margin-bottom: 41px;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all .3s linear;
 }
 
 @media (max-width: 949px) {
@@ -43,7 +69,6 @@
 }
 
 .profile {
-  
   margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
@@ -121,7 +146,6 @@
   align-self: center;
   text-align: center;
   align-items: baseline;
-  
 }
 
 @media (max-width: 669px) {
@@ -361,7 +385,7 @@
   }
 }
 
-.popup-eidt {
+.popup-edit {
   width: 880px;
   min-height: 100%;
   background-color: rgba(0,0,0,0.5);
@@ -374,16 +398,15 @@
 }
 
 @media (max-width: 879px) {
-  .popup-eidt {
+  .popup-edit {
   width: 100%;
   }
 }
 
-.popup-eidt__container {
+.popup-edit__container {
   width: 430px;
   height: 330px;
   background-color: #fff;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -392,13 +415,13 @@
 }
 
 @media (max-width: 590px) {
-  .popup-eidt__container {
+  .popup-edit__container {
     width: 282px;
     height: 322px;
   }
 }
 
-.popup-eidt__title {
+.popup-edit__title {
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -406,18 +429,19 @@
   color: #000;
   margin-top: 34px;
   margin-bottom: 24px;
+  margin: 32px 0 24px 36px;
+  align-self: start;
 }
 
 @media (max-width: 590px) {
-  .popup-eidt__title {
+  .popup-edit__title {
     font-size: 18px;
     line-height: 22px;
-    margin-top: 25px;
-    margin-bottom: 45px;
+    margin: 25px 22px 45px 22px;
   }
 }
 
-.popup-eidt__subtitle {
+.popup-edit__subtitle {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -428,24 +452,24 @@
 }
 
 @media (max-width: 320px) {
-  .popup-eidt__subtitle {
+  .popup-edit__subtitle {
   margin-left: 22px;
   }
 }
 
-.popup-eidt__line {
+.popup-edit__line {
   background-image: url(./img/Line\ 2.png);
   width: 358px;
   height: 1px;
 }
 
 @media (max-width: 590px) {
-  .popup-eidt__line {
+  .popup-edit__line {
   width: 238px;
   }
 }
 
-.popup-eidt__button {
+.popup-edit__save-button {
   width: 358px;
   height: 50px;
   margin-top: 48px;
@@ -457,14 +481,14 @@
   line-height: 22px;
 }
 
-.popup-eidt__button:hover {
+.popup-edit__save-button:hover {
   cursor: pointer;
   opacity: 0.8;
   transition: all .3s linear;
 }
 
 @media (max-width: 590px) {
-  .popup-eidt__button {
+  .popup-edit__save-button {
   width: 232px;
   height: 46px;
   font-size: 14px;
@@ -473,46 +497,35 @@
   }
 }
 
-.popup-eidt__close-button {
+.popup-edit__close-button {
   background-image: url(./img/Close\ Icon.png);
   background-color: transparent;
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 180px;
-  right: 180px;
+  bottom: 102%;
+  left: 102%;
   outline:none; 
   border:none;
+  
 }
 
-.popup-eidt__close-button:hover {
+.popup-edit__close-button:hover {
   cursor: pointer;
   opacity: 0.6;
   transition: all .3s linear;
 }
 
-@media (max-width: 868px) {
-  .popup-eidt__close-button {
-  right: 15%;
-  }
-}
-
 @media (max-width: 590px) {
-  .popup-eidt__close-button {
+  .popup-edit__close-button {
   background-image: url(./img/Close\ Icon\ s.png);
   width: 20px;
   height: 20px;
-  
+  bottom: 105%;
+  left: 94%;
   }
 }
 
-@media (max-width: 320px) {
-  .popup-eidt__close-button {
-  right: 5%;
-  
-  }
-}
-
-.popup-eidt_opened {
+.popup-edit_opened {
   display: flex;
 }
