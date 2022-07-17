@@ -3,7 +3,7 @@
   height: 50px;
   width: 150px;
   align-self: center;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 2px;
   background-image: url(../../../img/plus\(1\).svg);
   background-color: transparent;
@@ -14,30 +14,27 @@
 .profile__add-button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 @media (max-width: 1064px) {
-  .profile__add-button{
-  width: 282px;
-  height: 50px;
-  
+  .profile__add-button {
+    width: 282px;
+    height: 50px;
   }
 }
 
 @media (max-width: 490px) {
-  .profile__add-button{
+  .profile__add-button {
     margin: 0 auto 36px;
   }
 }
 
 @media (max-width: 372px) {
-  .profile__add-button{
-  margin: 0 19px 36px 19px;
-  background-image: url(../../../img/Add-button-small.svg);
-  width: 282px;
-  height: 50px;
-
+  .profile__add-button {
+    margin: 0 19px 36px 19px;
+    background-image: url(../../../img/Add-button-small.svg);
+    width: 282px;
+    height: 50px;
   }
 }
-

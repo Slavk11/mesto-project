@@ -3,12 +3,12 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
 }
 
 @media (max-width: 372px) {
-  .profile__info-subtitle{
+  .profile__info-subtitle {
     font-size: 14px;
     line-height: 17px;
     text-align: center;

@@ -16,15 +16,15 @@
 .popup__save-button:hover {
   cursor: pointer;
   opacity: 0.8;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 @media (max-width: 590px) {
   .popup__save-button {
-  width: 232px;
-  height: 46px;
-  font-size: 14px;
-  line-height: 17px;
-  margin-top: 9px;
+    width: 232px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 9px;
   }
 }

@@ -6,23 +6,22 @@
   position: absolute;
   bottom: 102%;
   left: 102%;
-  outline:none; 
-  border:none;
-  
+  outline: none;
+  border: none;
 }
 
 .popup__close-button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 @media (max-width: 590px) {
   .popup__close-button {
-  background-image: url(../../../img/Close-small.svg);
-  width: 20px;
-  height: 20px;
-  bottom: 105%;
-  left: 94%;
+    background-image: url(../../../img/Close-small.svg);
+    width: 20px;
+    height: 20px;
+    bottom: 105%;
+    left: 94%;
   }
 }

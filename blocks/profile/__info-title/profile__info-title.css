@@ -12,16 +12,15 @@
 
 @media (max-width: 669px) {
   .profile__info-title {
-  font-size: 36px;
-  
+    font-size: 36px;
   }
 }
 
 @media (max-width: 372px) {
   .profile__info-title {
-  font-size: 27px;
-  line-height: 33px;
-  margin-right: 0;
-  margin-bottom: 14px;
+    font-size: 27px;
+    line-height: 33px;
+    margin-right: 0;
+    margin-bottom: 14px;
   }
 }

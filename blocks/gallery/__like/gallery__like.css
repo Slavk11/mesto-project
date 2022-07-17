@@ -3,8 +3,8 @@
   background-image: url(../../../img/like.svg);
   width: 22px;
   height: 19px;
-  outline:none; 
-  border:none;
+  outline: none;
+  border: none;
   background-color: transparent;
   cursor: pointer;
 }
@@ -12,7 +12,7 @@
 .gallery__like:hover {
   cursor: pointer;
   opacity: 0.5;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 .gallery__like_active {

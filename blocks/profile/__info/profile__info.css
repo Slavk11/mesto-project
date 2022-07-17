@@ -4,14 +4,14 @@
 
 @media (max-width: 1064px) {
   .profile__info {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 372px) {
   .profile__info {
-  margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
