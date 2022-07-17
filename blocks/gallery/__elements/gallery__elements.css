@@ -1,0 +1,28 @@
+.gallery__elements {
+  margin: 0 17px 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 282px;
+}
+
+.gallery__elements:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media (max-width: 902px) {
+  .gallery__elements:nth-child(3n) {
+    margin: 0 17px 20px 0;
+  }
+}
+
+@media (max-width: 578px) {
+  .gallery__elements {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 578px) {
+  .gallery__elements:nth-child(3n) {
+    margin: 0 0 20px 0;
+  }
+}

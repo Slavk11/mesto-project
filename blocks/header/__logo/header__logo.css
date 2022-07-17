@@ -1,0 +1,28 @@
+.header__logo {
+  width: 142px;
+  height: 33px;
+  margin-bottom: 41px;
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all .3s linear;
+}
+
+@media (max-width: 949px) {
+  .header__logo {
+    margin-bottom: 32px;
+    margin-left: 27px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header__logo {
+    margin-bottom: 32px;
+    margin-left: 27px;
+    width: 104px;
+    height: 25px;
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  max-width: 880px;
+  max-height: 74px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 45px 0 40px 0;
+  border-bottom: 1px solid #545454;
+  cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .header {
+    margin: 28px auto 42px 0;
+  }
+}

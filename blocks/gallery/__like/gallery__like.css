@@ -1,0 +1,20 @@
+.gallery__like {
+  justify-self: center;
+  background-image: url(../../../img/like.svg);
+  width: 22px;
+  height: 19px;
+  outline:none; 
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.gallery__like:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all .3s linear;
+}
+
+.gallery__like_active {
+  background-image: url(../../../img/press-like.png);
+}

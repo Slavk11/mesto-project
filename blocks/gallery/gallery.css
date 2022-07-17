@@ -1,0 +1,12 @@
+.gallery {
+  display: flex;
+  margin: 0 0 67px 0;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 902px) {
+  .gallery {
+    justify-content: center;
+    margin: 0 auto;
+  }
+}

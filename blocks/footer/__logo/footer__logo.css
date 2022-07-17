@@ -1,0 +1,14 @@
+.footer__logo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+}
+
+@media (max-width: 597px) {
+  .footer__logo {
+  font-size: 14px;
+  line-height: 17px;
+  }
+}
