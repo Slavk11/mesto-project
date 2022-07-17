@@ -1,4 +1,4 @@
-.popup-edit {
+.popup {
   width: 880px;
   min-height: 100%;
   background-color: rgba(0,0,0,0.5);
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 879px) {
-  .popup-edit {
+  .popup {
   width: 100%;
   }
 }

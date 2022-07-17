@@ -11,73 +11,77 @@
   <header class="header">
     <img src="./img/Logo.svg" class="header__logo" alt="Логотип Mesto">
   </header>
-  <section class="profile">
-    <div class="profile__info">
-      <img class="profile__photo" src="./img/image.jpg" alt="">
-      <div class="profile__content">
-        <div class="profile__content-info">
-          <h1 class="profile__info-title">Жак-Ив Кусто</h1>
-          <button class="profile__edit-button" type="button"></button>
+  <main class="main">
+    <section class="profile">
+      <div class="profile__info">
+        <img class="profile__photo" src="./img/image.jpg" alt="Фотография профиля">
+        <div class="profile__content">
+          <div class="profile__content-info">
+            <h1 class="profile__info-title">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__info-subtitle">Исследователь океана</p>
         </div>
-        <p class="profile__info-subtitle">Исследователь океана</p>
       </div>
-    </div>
-    <button class="profile__add-button" type="button"></button>
-  </section>
-  <section class="gallery">
-    <div class="gallery__elements">
-      <img class="gallery__photo" src="./img/kirill-pershin-1088404-unsplash.jpg" alt="Фотография Карачаевская церковь">
-      <div class="gallery__subtitle">
-        <h2 class="gallery__text">Карачаевск</h2>
-        <button class="gallery__like">
+      <button class="profile__add-button" type="button"></button>
+    </section>
+    <section class="gallery">
+      <div class="gallery__elements">
+        <img class="gallery__photo" src="./img/kirill-pershin-1088404-unsplash.jpg" alt="Фотография Карачаевская церковь">
+        <div class="gallery__subtitle">
+          <h2 class="gallery__text">Карачаевск</h2>
+          <button class="gallery__like" type="button">
       </div>
-    </div>
-    <div class="gallery__elements">
-      <img class="gallery__photo" src="./img/kirill-pershin-1404681-unsplash.jpg" alt="Фотография гора Эльбрус">
-      <div class="gallery__subtitle">
-        <h2 class="gallery__text">Гора Эльбрус</h2>
-        <button class="gallery__like">
       </div>
-    </div>
-    <div class="gallery__elements">
-      <img class="gallery__photo" src="./img/kirill-pershin-1556355-unsplash.jpg" alt="Фотография горы Домбая">
-      <div class="gallery__subtitle">
-        <h2 class="gallery__text">Домбай</h2>
-        <button class="gallery__like">
+      <div class="gallery__elements">
+        <img class="gallery__photo" src="./img/kirill-pershin-1404681-unsplash.jpg" alt="Фотография гора Эльбрус">
+        <div class="gallery__subtitle">
+          <h2 class="gallery__text">Гора Эльбрус</h2>
+          <button class="gallery__like" type="button">
+        </div>
       </div>
-    </div>
-    <div class="gallery__elements">
-      <img class="gallery__photo" src="./img/kirill-pershin-1404681-unsplash.jpg" alt="Фотография гора Эльбрус">
-      <div class="gallery__subtitle">
-        <h2 class="gallery__text">Гора Эльбрус</h2>
-        <button class="gallery__like">
+      <div class="gallery__elements">
+        <img class="gallery__photo" src="./img/kirill-pershin-1556355-unsplash.jpg" alt="Фотография горы Домбая">
+        <div class="gallery__subtitle">
+          <h2 class="gallery__text">Домбай</h2>
+          <button class="gallery__like" type="button">
+        </div>
       </div>
-    </div>
-    <div class="gallery__elements">
-      <img class="gallery__photo" src="./img/kirill-pershin-1556355-unsplash.jpg" alt="Фотография горы Домбая">
-      <div class="gallery__subtitle">
-        <h2 class="gallery__text">Домбай</h2>
-        <button class="gallery__like">
+      <div class="gallery__elements">
+        <img class="gallery__photo" src="./img/kirill-pershin-1404681-unsplash.jpg" alt="Фотография гора Эльбрус">
+        <div class="gallery__subtitle">
+          <h2 class="gallery__text">Гора Эльбрус</h2>
+          <button class="gallery__like" type="button">
+        </div>
       </div>
-    </div>
-    <div class="gallery__elements">
-      <img class="gallery__photo" src="./img/kirill-pershin-1088404-unsplash.jpg" alt="Фотография Карачаевская церковь">
-      <div class="gallery__subtitle">
-        <h2 class="gallery__text">Карачаево-Черкесия</h2>
-        <button class="gallery__like">
+      <div class="gallery__elements">
+        <img class="gallery__photo" src="./img/kirill-pershin-1556355-unsplash.jpg" alt="Фотография горы Домбая">
+        <div class="gallery__subtitle">
+          <h2 class="gallery__text">Домбай</h2>
+          <button class="gallery__like" type="button">
+        </div>
       </div>
-    </div>
-  </section>
+      <div class="gallery__elements">
+        <img class="gallery__photo" src="./img/kirill-pershin-1088404-unsplash.jpg" alt="Фотография Карачаевская церковь">
+        <div class="gallery__subtitle">
+          <h2 class="gallery__text">Карачаево-Черкесия</h2>
+          <button class="gallery__like" type="button">
+        </div>
+      </div>
+    </section>
+  </main>
   <footer class="footer">
     <p class="footer__logo">&copy;2022 Mesto Russia</p>
   </footer>
-  <div class="popup-edit popup-edit_opened">
-    <div class="popup-edit__container">
-      <h2 class="popup-edit__title">Редактировать профиль</h2>
-      <input class="popup-edit__form" type="text" value="Жак-Ив Кусто"></input>
-      <input class="popup-edit__form" type="text" value="Исследователь океана"></input>
-      <button class="popup-edit__save-button">Сохранить</button>
-      <button class="popup-edit__close-button"></button>
+  <div class="popup popup_opened">
+    <div class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__user-form">
+        <input class="popup__form" type="text" value="Жак-Ив Кусто"></input>
+        <input class="popup__form" type="text" value="Исследователь океана"></input>
+        <button class="popup__save-button">Сохранить</button>
+      </form>
+      <button class="popup__close-button"></button>
     </div>
   </div>
 </body>

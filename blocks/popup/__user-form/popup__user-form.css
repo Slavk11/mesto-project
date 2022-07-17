@@ -1,0 +1,12 @@
+  .popup__user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 37px;
+  }
+  
+  @media (max-width: 590px) {
+    .popup__user-form {
+      margin-bottom: 25px
+  }
+}

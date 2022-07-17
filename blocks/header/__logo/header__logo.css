@@ -20,8 +20,6 @@
 
 @media (max-width: 425px) {
   .header__logo {
-    margin-bottom: 32px;
-    margin-left: 27px;
     width: 104px;
     height: 25px;
   }
