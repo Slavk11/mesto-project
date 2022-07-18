@@ -5,6 +5,10 @@
   line-height: 22px;
   color: #ffffff;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 336px;
 }
 
 @media (max-width: 372px) {
@@ -13,5 +17,6 @@
     line-height: 17px;
     text-align: center;
     margin-bottom: 36px;
+    max-width: 282px;
   }
 }

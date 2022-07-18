@@ -8,6 +8,10 @@
   align-self: center;
   text-align: center;
   align-items: baseline;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 336px;
 }
 
 @media (max-width: 669px) {
@@ -22,5 +26,6 @@
     line-height: 33px;
     margin-right: 0;
     margin-bottom: 14px;
+    max-width: 189px;
   }
 }
