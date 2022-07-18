@@ -1,5 +1,5 @@
 .popup__close-button {
-  background-image: url(../../../imgages/Close-big.svg);
+  background-image: url(../../../images/Close-big.svg);
   background-color: transparent;
   width: 32px;
   height: 32px;
@@ -18,7 +18,7 @@
 
 @media (max-width: 590px) {
   .popup__close-button {
-    background-image: url(../../../imgages/Close-small.svg);
+    background-image: url(../../../images/Close-small.svg);
     width: 20px;
     height: 20px;
     bottom: 105%;
