@@ -1,6 +1,6 @@
 .gallery__like {
   justify-self: center;
-  background-image: url(../../../img/like.svg);
+  background-image: url(../../../images/like.svg);
   width: 22px;
   height: 19px;
   outline: none;
@@ -16,5 +16,5 @@
 }
 
 .gallery__like_active {
-  background-image: url(../../../img/like-active.svg);
+  background-image: url(../../../images/like-active.svg);
 }
