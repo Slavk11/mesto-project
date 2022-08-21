@@ -3,6 +3,8 @@
 
 @import url(../blocks/page/page.css);
 
+@import url(../blocks/main/main.css);
+
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 
@@ -24,6 +26,8 @@
 @import url(../blocks/gallery/__photo/gallery__photo.css);
 @import url(../blocks/gallery/__subtitle/gallery__subtitle.css);
 @import url(../blocks/gallery/__text/gallery__text.css);
+@import url(../blocks/gallery/__delete/gallery__delete.css);
+@import url(../blocks/gallery/__elements/_delete/gallery__elements_delete.css);
 
 
 @import url(../blocks/footer/footer.css);
@@ -38,5 +42,10 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/_add_place/popup_add_place.css);
+@import url(../blocks/popup/__container/_photo/popup__container_photo.css);
+@import url(../blocks/popup/__full-size-image/popup__full-size-image.css);
+@import url(../blocks/popup/_full-size-photo/popup_full-size-photo.css);
+@import url(../blocks/popup/__photo-title/popup__photo-title.css);
 
 
