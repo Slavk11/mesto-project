@@ -1,11 +1,11 @@
 const popupOpened = document.querySelector('.profile__edit-button');
 const placePopupOpened = document.querySelector('.profile__add-button');
-const placePopup = document.querySelector('.popup_add-place');
+const placePopup = document.querySelector('.popup_place-add');
 const closePopup = document.querySelector('.popup__close-button');
 const popup = document.querySelector('.popup');
 const page = document.querySelector('.page');
 const placePopupClose = document.querySelector('.popup__close-button_place');
-const popupProfile = document.querySelector('.popup_profile');
+const popupProfile = document.querySelector('.popup_profile-edit');
 popupOpened.addEventListener('click', function () {
     popup.classList.add('popup_opened');
 });
@@ -22,7 +22,7 @@ placePopupClose.addEventListener('click', function () {
 
 
 const formElement = document.querySelector('.popup__user-form');
-const nameInput = document.querySelector('.popup__form_name');
+const nameInput = document.querySelector('.popup__form_name_input');
 const jobInput = document.querySelector('.popup__form_job');
 const profileName = document.querySelector('.profile__info-title');
 const profileJob = document.querySelector('.profile__info-subtitle');
@@ -64,7 +64,7 @@ const initialCards = [
         link: 'https://images.unsplash.com/photo-1660725484622-1452f3ce585a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80',
     },
 ];
-const placeForm = document.querySelector('.popup__user-form_place');
+const placeForm = document.querySelector('.popup__user-form_place_name');
 const placeLink = document.querySelector('.gallery__photo');
 const placeInput = document.querySelector('.popup__form_place-name');
 const saveButtonPlace = document.querySelector('.popup__save-button_place');
