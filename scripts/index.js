@@ -1,18 +1,16 @@
-const popupOpened = document.querySelector('.profile__edit-button');
-const placePopupOpened = document.querySelector('.profile__add-button');
+const editProfileButton = document.querySelector('.profile__edit-button');
+const addPlaceButton = document.querySelector('.profile__add-button');
 const placePopup = document.querySelector('.popup_place-add');
-const closePopup = document.querySelector('.popup__close-button');
 const popup = document.querySelector('.popup');
-const page = document.querySelector('.page');
+const closePopup = popup.querySelector('.popup__close-button');
 const placePopupClose = document.querySelector('.popup__close-button_place_form');
-const popupProfile = document.querySelector('.popup_profile-edit');
-popupOpened.addEventListener('click', function () {
+editProfileButton.addEventListener('click', function () {
     popup.classList.add('popup_opened');
 });
 closePopup.addEventListener('click', function () {
     popup.classList.remove('popup_opened');
 });
-placePopupOpened.addEventListener('click', function () {
+addPlaceButton.addEventListener('click', function () {
     placePopup.classList.add('popup_opened');
 });
 
@@ -45,7 +43,7 @@ function formSubmitHandler(evt) {
 
 formElement.addEventListener('submit', formSubmitHandler);
 saveButton.addEventListener('click', function () {
-    popupProfile.classList.remove('popup_opened');
+    popup.classList.remove('popup_opened');
 });
 
 const initialCards = [
