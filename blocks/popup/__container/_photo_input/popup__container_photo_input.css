@@ -1,4 +1,5 @@
-.popup__container_photo {
+.popup__container_photo_input {
+  width: auto;
   background-color: transparent;
   position: relative;
   display: flex;

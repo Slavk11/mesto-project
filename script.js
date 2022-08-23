@@ -4,7 +4,7 @@ const placePopup = document.querySelector('.popup_place-add');
 const closePopup = document.querySelector('.popup__close-button');
 const popup = document.querySelector('.popup');
 const page = document.querySelector('.page');
-const placePopupClose = document.querySelector('.popup__close-button_place');
+const placePopupClose = document.querySelector('.popup__close-button_place_form');
 const popupProfile = document.querySelector('.popup_profile-edit');
 popupOpened.addEventListener('click', function () {
     popup.classList.add('popup_opened');
@@ -20,7 +20,17 @@ placePopupClose.addEventListener('click', function () {
     placePopup.classList.remove('popup_opened');
 });
 
+///
+///
 
+function closeePopup (popup) {
+    popup.classList.remove('popup_opened');
+};
+
+    function closePopupAddPlace() {
+        closeePopup(placePopup);
+
+}
 const formElement = document.querySelector('.popup__user-form');
 const nameInput = document.querySelector('.popup__form_name_input');
 const jobInput = document.querySelector('.popup__form_job');
@@ -79,6 +89,7 @@ const popupPlaceLink = document.querySelector('.popup__form_link');
 function addCard(evt) {
     evt.preventDefault();
     showPlace({ name: popupPlaceTitle.value, link: popupPlaceLink.value });
+        closeePopup(placePopup)
 }
 
 function openPopup(elem) {
@@ -96,9 +107,8 @@ function makeCards(evt) {
     });
     galleryPhoto.src = evt.link;
     galleryTitle.textContent = evt.name;
-    saveButtonPlace.addEventListener('click', function () {
-        placePopup.classList.remove('popup_opened');
-    });
+    ///
+    
 
     deletePlace.addEventListener('click', function (evt) {
         evt.currentTarget.closest('.gallery__elements').remove();
@@ -121,7 +131,7 @@ initialCards.forEach(function (evt) {
 });
 placeForm.addEventListener('submit', addCard);
 
-const popupFullSizePhoto = document.querySelector('.popup_full-size-photo');
+const popupFullSizePhoto = document.querySelector('.popup_full-size-photo_zoom');
 const popupContainerPhoto = document.querySelector('.popup__container_photo');
 const closeButtonPhoto = document.querySelector('.popup__close-button_photo');
 const fullSizeImage = document.querySelector('.popup__full-size-image');
