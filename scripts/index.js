@@ -133,7 +133,7 @@ placeForm.addEventListener('submit', addCard);
 
 const popupFullSizePhoto = document.querySelector('.popup_full-size-photo_zoom');
 const popupContainerPhoto = document.querySelector('.popup__container_photo');
-const closeButtonPhoto = document.querySelector('.popup__close-button_photo');
+const closeButtonPhoto = document.querySelector('.popup__close-button_photo_zoom');
 const fullSizeImage = document.querySelector('.popup__full-size-image');
 const photoTitle = document.querySelector('.popup__photo-title');
 
