@@ -7,10 +7,10 @@ const placePopupClose = document.querySelector('.popup__close-button_place_form'
 
 function popupClose(popup) {
     popup.classList.remove('popup_opened');
-}
+};
 function popupOpen(popup) {
     popup.classList.add('popup_opened');
-}
+};
 
 editProfileButton.addEventListener('click', function () {
     popupOpen(popupProfileEdit);
@@ -39,7 +39,7 @@ function editUserInformation(evt) {
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
     popupClose(popupProfileEdit);
-}
+};
 userForm.addEventListener('submit', editUserInformation);
 
 const placeForm = document.querySelector('.popup__user-form_place_name');
@@ -58,7 +58,7 @@ function addCard(evt) {
     showPlace({ name: popupPlaceTitle.value, link: popupPlaceLink.value });
     evt.target.reset();
     popupClose(placePopup);
-}
+};
 
 function makeCards(dataObject) {
     const galleryTemplate = addTemplate.cloneNode(true);
@@ -86,10 +86,10 @@ function makeCards(dataObject) {
     });
 
     return galleryTemplate;
-}
+};
 function showPlace(dataObject) {
     gallery.prepend(makeCards(dataObject));
-}
+};
 initialCards.forEach(function (evt) {
     showPlace(evt);
 });
