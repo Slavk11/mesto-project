@@ -25,10 +25,13 @@ function closeePopup (popup) {
     popup.classList.remove('popup_opened');
 };
 
-    function closePopupAddPlace() {
-        closeePopup(placePopup);
+    
 
-}
+function openPopup (popup) {
+    popup.classList.add('popup_opened');
+};
+
+
 const formElement = document.querySelector('.popup__user-form');
 const nameInput = document.querySelector('.popup__form_name_input');
 const jobInput = document.querySelector('.popup__form_job');
@@ -87,7 +90,7 @@ const popupPlaceLink = document.querySelector('.popup__form_link');
 function addCard(evt) {
     evt.preventDefault();
     showPlace({ name: popupPlaceTitle.value, link: popupPlaceLink.value });
-        closeePopup(placePopup)
+    closeePopup (placePopup);
 }
 
 function openPopup(elem) {
