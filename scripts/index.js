@@ -12,15 +12,12 @@ function openPopup (popup) {
     popup.classList.add('popup_opened');
 };
 
-function openProfilePopup () {
-    openPopup(popupProfileEdit);
-};
-editProfileButton.addEventListener('click', openProfilePopup);
+editProfileButton.addEventListener('click', function () {
+    openPopup(popupProfileEdit)});
 
-function closeProfilePopup () {
+closePopup.addEventListener('click', function () {
     closeePopup(popupProfileEdit)
-};
-closePopup.addEventListener('click', closeProfilePopup);
+});
 ///
 
 addPlaceButton.addEventListener('click', function () {
