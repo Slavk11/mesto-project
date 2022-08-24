@@ -1,15 +1,28 @@
 const editProfileButton = document.querySelector('.profile__edit-button');
 const addPlaceButton = document.querySelector('.profile__add-button');
-const placePopup = document.querySelector('.popup_place-add');
-const popup = document.querySelector('.popup');
-const closePopup = popup.querySelector('.popup__close-button');
+const placePopup = document.querySelector('.popup_place_add');
+const popupProfileEdit = document.querySelector('.popup_profile_edit');
+const closePopup = document.querySelector('.popup__close-button');
 const placePopupClose = document.querySelector('.popup__close-button_place_form');
-editProfileButton.addEventListener('click', function () {
-    popup.classList.add('popup_opened');
-});
-closePopup.addEventListener('click', function () {
+
+function closeePopup (popup) {
     popup.classList.remove('popup_opened');
-});
+};
+function openPopup (popup) {
+    popup.classList.add('popup_opened');
+};
+
+function openProfilePopup () {
+    openPopup(popupProfileEdit);
+};
+editProfileButton.addEventListener('click', openProfilePopup);
+
+function closeProfilePopup () {
+    closeePopup(popupProfileEdit)
+};
+closePopup.addEventListener('click', closeProfilePopup);
+///
+
 addPlaceButton.addEventListener('click', function () {
     placePopup.classList.add('popup_opened');
 });
@@ -21,18 +34,10 @@ placePopupClose.addEventListener('click', function () {
 ///
 ///
 
-function closeePopup (popup) {
-    popup.classList.remove('popup_opened');
-};
-
-    
-
-function openPopup (popup) {
-    popup.classList.add('popup_opened');
-};
 
 
-const formElement = document.querySelector('.popup__user-form');
+
+const userForm = document.querySelector('.popup__user-form');
 const nameInput = document.querySelector('.popup__form_name_input');
 const jobInput = document.querySelector('.popup__form_job');
 const profileName = document.querySelector('.profile__info-title');
@@ -42,41 +47,14 @@ function formSubmitHandler(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
-}
+    closeProfilePopup ()
+};
+userForm.addEventListener('submit', formSubmitHandler);
 
-formElement.addEventListener('submit', formSubmitHandler);
-saveButton.addEventListener('click', function () {
-    popup.classList.remove('popup_opened');
-});
 
-const initialCards = [
-    {
-        name: 'Москва',
-        link: 'https://images.unsplash.com/photo-1615225150799-524453b31447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-    },
-    {
-        name: 'Санкт-Петербург',
-        link: 'https://images.unsplash.com/photo-1556610961-2fecc5927173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80',
-    },
-    {
-        name: 'Курильские острова',
-        link: 'https://images.unsplash.com/photo-1638190654337-9e52a621a6fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
-    },
-    {
-        name: 'Владивосток',
-        link: 'https://images.unsplash.com/photo-1615092193942-0bb817ba2f9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    },
-    {
-        name: 'Байкал',
-        link: 'https://images.unsplash.com/photo-1501675423372-9bfa95849e62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    },
-    {
-        name: 'Сахалин',
-        link: 'https://images.unsplash.com/photo-1660725484622-1452f3ce585a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80',
-    },
-];
+
+
 const placeForm = document.querySelector('.popup__user-form_place_name');
-const placeLink = document.querySelector('.gallery__photo');
 const placeInput = document.querySelector('.popup__form_place-name');
 const saveButtonPlace = document.querySelector('.popup__save-button_place');
 const galleryElements = document.querySelector('.gallery__elements');
@@ -90,13 +68,11 @@ const popupPlaceLink = document.querySelector('.popup__form_link');
 function addCard(evt) {
     evt.preventDefault();
     showPlace({ name: popupPlaceTitle.value, link: popupPlaceLink.value });
+    evt.target.reset();
     closeePopup (placePopup);
-}
-
-function openPopup(elem) {
-    elem.classList.add('popup_opened');
 };
-function makeCards(evt) {
+
+function makeCards(dataObject) {
     const galleryTemplate = addTemplate.cloneNode(true);
     const galleryPhoto = galleryTemplate.querySelector('.gallery__photo');
     const galleryTitle = galleryTemplate.querySelector('.gallery__text');
@@ -105,9 +81,12 @@ function makeCards(evt) {
 
     galleryLike.addEventListener('click', function () {
     galleryLike.classList.toggle('gallery__like_active');
+
     });
-    galleryPhoto.src = evt.link;
-    galleryTitle.textContent = evt.name;
+    galleryPhoto.src = dataObject.link;
+    galleryPhoto.alt = dataObject.name;
+    galleryTitle.textContent = dataObject.name;
+    
     ///
     
 
@@ -116,16 +95,16 @@ function makeCards(evt) {
     });
 
     galleryPhoto.addEventListener('click',function () {
-        fullSizeImage.src = evt.link;
-        photoTitle.textContent = evt.name;
+        fullSizeImage.src = dataObject.link;
+        photoTitle.textContent = dataObject.name;
         popupFullSizePhoto.classList.add('popup_opened')
     }
     );
 
     return galleryTemplate;
 }
-function showPlace(evt) {
-    gallery.prepend(makeCards(evt));
+function showPlace(dataObject) {
+    gallery.prepend(makeCards(dataObject));
 }
 initialCards.forEach(function (evt) {
     showPlace(evt);
