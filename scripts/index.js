@@ -2,63 +2,61 @@ const editProfileButton = document.querySelector('.profile__edit-button');
 const addPlaceButton = document.querySelector('.profile__add-button');
 const placePopup = document.querySelector('.popup_name_place_add');
 const popupProfileEdit = document.querySelector('.popup_name_profile_edit');
-const closePopup = document.querySelector('.popup__close-button');
-const placePopupClose = document.querySelector('.popup__close-button_place_form');
+const profileCloseButton = popupProfileEdit.querySelector('.popup__close-button_place_profile');
+const placePopupClose = placePopup.querySelector('.popup__close-button_place_form');
 
-function popupClose(popup) {
+function closePopup(popup) {
     popup.classList.remove('popup_opened');
-};
-function popupOpen(popup) {
+}
+function openPopup(popup) {
     popup.classList.add('popup_opened');
-};
+}
 
 editProfileButton.addEventListener('click', function () {
-    popupOpen(popupProfileEdit);
+    openPopup(popupProfileEdit);
+    profileName.textContent = nameInput.value;
+    profileJob.textContent = jobInput.value;
 });
 
-closePopup.addEventListener('click', function () {
-    popupClose(popupProfileEdit);
+profileCloseButton.addEventListener('click', function () {
+    closePopup(popupProfileEdit);
 });
 
 addPlaceButton.addEventListener('click', function () {
-    popupOpen(placePopup);
+    openPopup(placePopup);
 });
 
 placePopupClose.addEventListener('click', function () {
-    popupClose(placePopup);
+    closePopup(placePopup);
 });
 
 const userForm = document.querySelector('.popup__user-form');
-const nameInput = document.querySelector('.popup__form_name_input');
+const nameInput = document.querySelector('.popup__form_type_name-input');
 const jobInput = document.querySelector('.popup__form_type_edit-job');
 const profileName = document.querySelector('.profile__info-title');
 const profileJob = document.querySelector('.profile__info-subtitle');
-const saveButton = document.querySelector('.popup__save-button');
 function editUserInformation(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
-    popupClose(popupProfileEdit);
-};
+    closePopup(popupProfileEdit);
+}
 userForm.addEventListener('submit', editUserInformation);
 
 const placeForm = document.querySelector('.popup__user-form_place_name');
-const placeInput = document.querySelector('.popup__form_place-name');
+const placeInput = document.querySelector('.popup__form_type_place-name');
 const saveButtonPlace = document.querySelector('.popup__save-button_place');
 const galleryElements = document.querySelector('.gallery__elements');
-
 const addTemplate = document.querySelector('.add-template').content;
 const gallery = document.querySelector('.gallery');
-
-const popupPlaceTitle = document.querySelector('.popup__form_place-name');
-const popupPlaceLink = document.querySelector('.popup__form_link');
+const popupPlaceLink = document.querySelector('.popup__form_type_link');
 
 function addCard(evt) {
     evt.preventDefault();
-    showPlace({ name: popupPlaceTitle.value, link: popupPlaceLink.value });
+    showPlace({ name: placeInput.value, link: popupPlaceLink.value });
     evt.target.reset();
-    popupClose(placePopup);
-};
+    closePopup(placePopup);
+}
 
 function makeCards(dataObject) {
     const galleryTemplate = addTemplate.cloneNode(true);
@@ -82,14 +80,14 @@ function makeCards(dataObject) {
         fullSizeImage.src = dataObject.link;
         fullSizeImage.alt = dataObject.name;
         photoTitle.textContent = dataObject.name;
-        popupOpen(popupFullSizePhoto);
+        openPopup(popupFullSizePhoto);
     });
 
     return galleryTemplate;
-};
+}
 function showPlace(dataObject) {
     gallery.prepend(makeCards(dataObject));
-};
+}
 initialCards.forEach(function (evt) {
     showPlace(evt);
 });
@@ -102,5 +100,5 @@ const fullSizeImage = document.querySelector('.popup__full-size-image');
 const photoTitle = document.querySelector('.popup__photo-title');
 
 closeButtonPhoto.addEventListener('click', function () {
-    popupClose(popupFullSizePhoto);
+    closePopup(popupFullSizePhoto);
 });
