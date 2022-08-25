@@ -1,7 +1,7 @@
 const editProfileButton = document.querySelector('.profile__edit-button');
 const addPlaceButton = document.querySelector('.profile__add-button');
-const placePopup = document.querySelector('.popup_place_add');
-const popupProfileEdit = document.querySelector('.popup_profile_edit');
+const placePopup = document.querySelector('.popup_name_place_add');
+const popupProfileEdit = document.querySelector('.popup_name_profile_edit');
 const closePopup = document.querySelector('.popup__close-button');
 const placePopupClose = document.querySelector('.popup__close-button_place_form');
 
@@ -95,7 +95,7 @@ initialCards.forEach(function (evt) {
 });
 placeForm.addEventListener('submit', addCard);
 
-const popupFullSizePhoto = document.querySelector('.popup_full-size-photo_zoom');
+const popupFullSizePhoto = document.querySelector('.popup_name_full-image');
 const popupContainerPhoto = document.querySelector('.popup__container_photo');
 const closeButtonPhoto = document.querySelector('.popup__close-button_photo_zoom');
 const fullSizeImage = document.querySelector('.popup__full-size-image');
