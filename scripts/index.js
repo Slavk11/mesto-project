@@ -14,8 +14,8 @@ function openPopup(popup) {
 
 editProfileButton.addEventListener('click', function () {
     openPopup(popupProfileEdit);
-    profileName.textContent = nameInput.value;
-    profileJob.textContent = jobInput.value;
+    nameInput.value = profileName.textContent
+    jobInput.value = profileJob.textContent
 });
 
 popupProfileCloseButton.addEventListener('click', function () {
