@@ -2,8 +2,8 @@ const editProfileButton = document.querySelector('.profile__edit-button');
 const addPlaceButton = document.querySelector('.profile__add-button');
 const placePopup = document.querySelector('.popup_name_place_add');
 const popupProfileEdit = document.querySelector('.popup_name_profile_edit');
-const profileCloseButton = popupProfileEdit.querySelector('.popup__close-button_place_profile');
-const placePopupClose = placePopup.querySelector('.popup__close-button_place_form');
+const popupProfileCloseButton = popupProfileEdit.querySelector('.popup__close-button_place_profile');
+const popupPlaceCloseButton = placePopup.querySelector('.popup__close-button_place_form');
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
@@ -18,7 +18,7 @@ editProfileButton.addEventListener('click', function () {
     profileJob.textContent = jobInput.value;
 });
 
-profileCloseButton.addEventListener('click', function () {
+popupProfileCloseButton.addEventListener('click', function () {
     closePopup(popupProfileEdit);
 });
 
@@ -26,7 +26,7 @@ addPlaceButton.addEventListener('click', function () {
     openPopup(placePopup);
 });
 
-placePopupClose.addEventListener('click', function () {
+popupPlaceCloseButton.addEventListener('click', function () {
     closePopup(placePopup);
 });
 
@@ -95,10 +95,10 @@ placeForm.addEventListener('submit', addCard);
 
 const popupFullSizePhoto = document.querySelector('.popup_name_full-image');
 const popupContainerPhoto = document.querySelector('.popup__container_photo');
-const closeButtonPhoto = document.querySelector('.popup__close-button_photo_zoom');
+const popupFullSizeCloseButton =  popupFullSizePhoto.querySelector('.popup__close-button_photo_zoom');
 const fullSizeImage = document.querySelector('.popup__full-size-image');
 const photoTitle = document.querySelector('.popup__photo-title');
 
-closeButtonPhoto.addEventListener('click', function () {
+popupFullSizeCloseButton.addEventListener('click', function () {
     closePopup(popupFullSizePhoto);
 });
