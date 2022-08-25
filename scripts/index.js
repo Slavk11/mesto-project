@@ -30,7 +30,7 @@ placePopupClose.addEventListener('click', function () {
 
 const userForm = document.querySelector('.popup__user-form');
 const nameInput = document.querySelector('.popup__form_name_input');
-const jobInput = document.querySelector('.popup__form_job');
+const jobInput = document.querySelector('.popup__form_type_edit-job');
 const profileName = document.querySelector('.profile__info-title');
 const profileJob = document.querySelector('.profile__info-subtitle');
 const saveButton = document.querySelector('.popup__save-button');
